@@ -31,10 +31,10 @@ Or, you could setup the environment with following dependencies:
 
 The minimum requirements for theis software, and tested version, are Python 3.x and Julia 1.4.0. This software requires the following dependencies to be installed:
 
--[JOLI](https://github.com/slimgroup/JOLI.jl),Julia framework for constructing matrix-free linear operators with explicit domain/range type control and applying them in basic algebraic matrix-vector operations.
--[SeisJOLI](https://github.com/slimgroup/SeisJOLI.jl). Collection of SLIM in-house operators based on JOLI package.
--[Arpack](https://github.com/JuliaLinearAlgebra/Arpack.jl). Julia wrapper for the arpack library designed to solve large scale eigenvalue problems.
--[LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/). Julia provides native implementations of many common and useful linear algebra operations which can be loaded with using LinearAlgebra.
+-[JOLI](https://github.com/slimgroup/JOLI.jl),Julia framework for constructing matrix-free linear operators with explicit domain/range type control and applying them in basic algebraic matrix-vector operations.\\
+-[SeisJOLI](https://github.com/slimgroup/SeisJOLI.jl). Collection of SLIM in-house operators based on JOLI package.\\
+-[Arpack](https://github.com/JuliaLinearAlgebra/Arpack.jl). Julia wrapper for the arpack library designed to solve large scale eigenvalue problems.\\
+-[LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/). Julia provides native implementations of many common and useful linear algebra operations which can be loaded with using LinearAlgebra.\\
 -[Random](https://github.com/JuliaLang/julia/tree/master/stdlib/Random/). Julia provides extended support for random number generation.
 
 First, you need install the following packages from the stable master branch:
