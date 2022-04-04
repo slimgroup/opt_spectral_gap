@@ -2,11 +2,11 @@
 
 This repository will contain codes for generating proposed subsampling results in Zhang, Y., Louboutin, M., Siahkoohi, A., Yin, Z., Kumar, R., and Herrmann, F.J., A simulation-free seismic survey design by maximizing the spectral gap.
 
-# MinimizeSR
+# opt_spectral_gap
 
 This code base is using the Julia Language and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/)
 to make a reproducible scientific project named
-> MinimizeSR
+> opt_spectral_gap
 
 It is authored by Yijun.
 
@@ -31,10 +31,14 @@ Or, you could setup the environment with following dependencies:
 
 The minimum requirements for theis software, and tested version, are Python 3.x and Julia 1.4.0. This software requires the following dependencies to be installed:
 
--[JOLI](https://github.com/slimgroup/JOLI.jl),Julia framework for constructing matrix-free linear operators with explicit domain/range type control and applying them in basic algebraic matrix-vector operations.\\
--[SeisJOLI](https://github.com/slimgroup/SeisJOLI.jl). Collection of SLIM in-house operators based on JOLI package.\\
--[Arpack](https://github.com/JuliaLinearAlgebra/Arpack.jl). Julia wrapper for the arpack library designed to solve large scale eigenvalue problems.\\
--[LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/). Julia provides native implementations of many common and useful linear algebra operations which can be loaded with using LinearAlgebra.\\
+-[JOLI](https://github.com/slimgroup/JOLI.jl),Julia framework for constructing matrix-free linear operators with explicit domain/range type control and applying them in basic algebraic matrix-vector operations.
+
+-[SeisJOLI](https://github.com/slimgroup/SeisJOLI.jl). Collection of SLIM in-house operators based on JOLI package.
+
+-[Arpack](https://github.com/JuliaLinearAlgebra/Arpack.jl). Julia wrapper for the arpack library designed to solve large scale eigenvalue problems.
+
+-[LinearAlgebra](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/). Julia provides native implementations of many common and useful linear algebra operations which can be loaded with using LinearAlgebra.
+
 -[Random](https://github.com/JuliaLang/julia/tree/master/stdlib/Random/). Julia provides extended support for random number generation.
 
 First, you need install the following packages from the stable master branch:
@@ -57,6 +61,7 @@ This directory contains codes to run the corresponding experiments.You can run t
  Main_optimization.jl #The main function of our experiments to generate subsampled positions to get a subsampling mask. 
  Opt_SpectralRatio_SA.jl #The subfunction that including the simulated annealing algorithm and selecting neighboring states.
  NLfunForward_test1.jl #The subfunction to create mask and get the spectral ratio.
+ Subsampling_1D.jl #The subfunction provides various ways to genereate subsampling indexes, such as: random subsampling, jittered subsampling and blue-noise subsampling.  
  ```
 
 This directory only includes the proposed simulation-free method to obtain the subsampling mask and the corresponding wavefield reconstruction can be found [here](https://github.com/slimgroup/Software.SEG2020/tree/master/zhang2020SEGwrw).
